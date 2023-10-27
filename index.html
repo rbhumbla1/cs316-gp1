@@ -6,43 +6,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
     <title>Airline Flight Search</title>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Flights</a></li>
-                <li><a href="#">Hotels</a></li>
-                <li><a href="#">Cars</a></li>
-                <li><a href="#">Vacations</a></li>
+                <li><a href="https://www.hotels.com">Hotels</a></li>
+                <li><a href="https://www.enterprise.com">Cars</a></li>
+                <li><a href="https://www.vacation.com">Vacations</a></li>
+                <li id="language-selector">
+                    <div id="google_translate_element"></div>  
+                </li>
             </ul>
-        </nav>
+        </div>
     </header>
+
     <main>
+
+        
         <section id="search-form">
+            <select id="trip">
+                <label for="trip">Trip Type:</label>
+                <option value="one-way">One-way</option>
+                <option value="round-trip">Round-trip</option>
+            </select>
+
+            <select id="passenger">
+                <label for="passenger">Passengers:</label>
+                <option value="1">1 passenger</option>
+                <option value="2">2 passengers</option>
+                <option value="3">3 passengers</option>
+                <option value="4">4 passengers</option>
+                <option value="5">5 passengers</option>
+                <option value="6">6 passengers</option>
+                <option value="7">7 passengers</option>
+                <option value="8">8 passengers</option>
+            </select>
+
+            <br>
+
+            <div id="passengerDetails"></div>
             <h1>Find Flights</h1>
+
             <form>
-                <label for="fight Number:" </label>
-                <input type="text" id="fightNumber" placeholder='number'>
-                <label for="departure">Departure:</label>
+                <label for="departure"></label>
                 <input type="text" id="departure" placeholder="From">
-                <label for="destination">Destination:</label>
+                <label for="destination"></label>
                 <input type="text" id="destination" placeholder="To">
-                <label for="departure-date">Departure Date:</label>
-                <input type="date" id="departure-date">
-                <label for="return-date">Return Date:</label>
-                <input type="date" id="return-date">
-                <button type="submit">Search</button>
+                <label for="departureDateInput">Departure:</label>
+                <input type="date" id="departureDateInput" placeholder="Departure">
+                <label for="return-date">Return:</label>
+                <input type="date" id="return-date" placeholder="Return">
+                <button type="button" id="search-button">Search</button>
             </form>
         </section>
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script type="text/script.js"></script>
-
     </main>
+    <section id="flight-results">
+        <h2>Flight Results</h2>
+        <div id="flight-result-content"></div>
+        <div id="flight-data"></div>
+
+    </section>
+
+
+    <footer>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
