@@ -1,9 +1,17 @@
-/* devanna watts css file */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+/* Add this CSS to style the navbar */
+.navbar {
+    background-color: #0073e6; 
+    padding: 10px 0; 
+    margin: 10px 0;
+   
 }
+ 
 
+ #google_translate_element {
+    font-size: 14px;
+ }
+       
+       
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -15,32 +23,59 @@ header {
     color: #fff;
     padding: 10px 0;
 }
-
-nav ul {
+/* Style the navigation links in the navbar */
+ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0073e6; 
+}
+.trip {
+    margin-bottom: 20px;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #fff; 
     text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+    padding: 14px 16px;
     text-decoration: none;
-    font-weight: bold;
 }
 
+
+li a:hover {
+    background-color: #0059b3; 
+}
+
+/* Style the language selector */
+#google_translate_element {
+    margin-left: 20px;
+}
+
+#google_translate_element {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fff; 
+    color: #333; 
+}
 main {
     padding: 20px;
+    overflow-y: auto;
+   
 }
 
 #search-form {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    overflow-y: auto;
 }
 
 #search-form h1 {
@@ -51,6 +86,7 @@ main {
 form {
     display: flex;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 label {
@@ -60,20 +96,50 @@ label {
 }
 
 input[type="text"],
-input[type="date"],
-button {
+input[type="date"] {
     padding: 10px;
-    border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 15px  30px;
+    margin-right: 25px;
+    height: 30px;
+    
 }
-
 button {
     background-color: #0073e6;
     color: #fff;
     cursor: pointer;
+    margin-left: 30px;
+    padding: 15px 35px; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px; 
 }
+
 
 button:hover {
     background-color: #0059b3;
 }
+
+#trip,
+#passenger {
+  width: 150px; 
+  height: 33px;
+}
+
+
+  ::placeholder {
+    font-weight: bold;
+  }
+  
+  input::placeholder {
+    padding: 6px;
+  }
+  .form-control::placeholder {
+    border: 1px solid #ccc; 
+    padding: 6px; 
+    border-radius: 8px;
+}
+
+  
