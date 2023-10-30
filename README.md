@@ -11,6 +11,7 @@ This program helps user to find flight without having to go through the struggle
 - [How to Use](#how-to-Use)
 - [Built With](#built-with)
 - [About](#about)
+- [Contributors](#contributors)
 
 
 ## Features
@@ -34,6 +35,11 @@ This program helps user to find flight without having to go through the struggle
 This small project is about helping user find their flight. through this website user can input their
 destinations and be redicted to the flight website. In our case, we are using United Airline to book user flights.
 
+## contributers
+- Enrique E
+- Devanna
+- Juan B
+- Marliayetu K
+- Gilberto
 
-
-
+Screenshot is in the file
