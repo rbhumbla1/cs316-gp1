@@ -1,5 +1,4 @@
-Script.js 
- 
+
 // fuction for google translate
 // function googleTranslateElementInit() {
 //     new google.translate.TranslateElement(
