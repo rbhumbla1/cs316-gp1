@@ -1,9 +1,14 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-    const departureDateInput = document.getElementById("departure-date");
-    const returnDateInput = document.getElementById("return-date");
-    const departureDatePickerButton = document.getElementById("show-departure-datepicker");
-    const returnDatePickerButton = document.getElementById("show-return-datepicker");
+Script.js 
+ 
+// fuction for google translate
+// function googleTranslateElementInit() {
+//     new google.translate.TranslateElement(
+//         {
+//             pageLanguage: 'en'
+//         },
+//         'google_translate_element'
+//     );
+// }
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const departureDateInput = document.getElementById("departureDateInput");
@@ -51,11 +56,41 @@ document.addEventListener("DOMContentLoaded", function () {
             
         });
 
-    departureDatePickerButton.addEventListener("click", function () {
-        $(departureDateInput).datepicker("show");
-    });
+        
 
-    returnDatePickerButton.addEventListener("click", function () {
-        $(returnDateInput).datepicker("show");
-    });
-});
+    // Function to fetch and process flight data
+//     function fetchFlightData() {
+//         const api_key = "6541b87234d03694fc8237d2";
+//         const Departure_flight_date = departureDateInput.value;
+//         const Arrival_flight_date = returnDateInput.value;
+//         const passengerCount = parseInt(passengerCountSelect.value, 10);
+
+//         // Prepare the request parameters
+//         const params = new URLSearchParams({
+//             access_key: api_key,
+//         });
+
+//         // Construct the URL with the 'to' values
+//         const to = document.getElementById("destination").value;
+
+//         const flightAPIURL = `https://api.flightapi.io/roundtrip/${api_key}/$SFO/${to}/${Departure_flight_date}/${Arrival_flight_date}/${passengerCount}/0/0/Economy/USD`;
+
+//         window.location.href = flightAPIURL;
+//     }
+
+//     // event listener for "Search" button
+//     const searchButton = document.getElementById("search-button");
+//     searchButton.addEventListener("click", function (event) {
+//         event.preventDefault();
+//         form.reportValidity();
+//         if (form.checkValidity()) {
+//             fetchFlightData();
+//         }
+//     });
+
+//     //  event listener for the form submission
+//     form.addEventListener("submit", function (event) {
+//         event.preventDefault();
+//     });
+// });
+

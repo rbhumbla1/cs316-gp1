@@ -1,46 +1,205 @@
-<!-- This is group project index.html -->
+Index
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Airline Flight Search</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Flights</a></li>
-                <li><a href="#">Hotels</a></li>
-                <li><a href="#">Cars</a></li>
-                <li><a href="#">Vacations</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="search-form">
-            <h1>Find Flights</h1>
-            <form>
-                <label for="departure">Departure:</label>
-                <input type="text" id="departure" placeholder="From">
-                <label for="destination">Destination:</label>
-                <input type="text" id="destination" placeholder="To">
-                <label for="departure-date">Departure Date:</label>
-                <input type="date" id="departure-date">
-                <label for="return-date">Return Date:</label>
-                <input type="date" id="return-date">
-                <button type="submit">Search</button>
-            </form>
-        </section>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flight website</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script type="text/script.js"></script>
+        </head>
+<body>
+    
+    <div id="loading">Loading...</div>
 
-    </main>
+    <div id="flight-info"></div>
+
+<!--NAR BAR-->
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check"  class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"> RUNWAY</label>
+    <ul>
+        <li ><a href="index.html">home</a></li>
+        <li ><a href="https://www.enterprise.com"  target="_blank">cars</a></li>
+        <li ><a href="https://www.delta.com" target="_blank">deals</a></li>
+        <li><a href="https://www.booking.com" target="_blank">hotel</a></li>
+        <li><a href="https://www.vacation.com" target="_blank">vacation</a></li>
+        <li><a href="contact.html" target="_blank">contact us</a></li>
+
+      </ul>
+    </nav>
+
+  <header  class="section_container header_container">
+    <h1 class="section_header"> Book with Us</h1>
+    <img src="assest/best.jpg" alt="header">
+
+</header>
+
+
+  <section  class="section_container  booking_container">
+   <select class="trip">
+        <label for="trip">Trip Type:</label>
+        <option value="one-way">One-way</option>
+        <option value="round-trip">Round-trip</option>
+    </select>
+    <div class="booking_nav">
+        <a href="#" class="class-option">Economy Class</a>
+        <a href="#" class="class-option">Business Class</a>
+        <a href="#" class="class-option">First Class</a>
+    </div>
+    <form>
+        <div class="form_group">
+            <span><i class="ri-map-pin-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label>From:</label>
+                </div>
+                <p>Find destination</p>
+
+            </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-map-pin-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label>To:</label>
+                </div>
+                <p>Find destination</p>
+
+            </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-user-fill"></i></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="number">
+                    <label> Passengers</label>
+                </div>
+                <p>Add passengers</p>
+            </div>
+        </div>
+
+        <div class="form_group">
+            
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="date">    
+                </div>
+                <p>Departure</p>
+
+            </div>
+        </div>
+        <div class="form_group">
+           </span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="date"  name="return-date"  disabled>
+                </div>
+                <p>Return</p>
+            </div>
+        </div>
+       <button class="btn"><i class="ri-search-line"></i></button>
+    </form>
+  </section>
+
+  <section id="flight-result">
+    <h2>flight result</h2>
+    <div id="flight-result-content"></div>
+    <div id="flight-data"></div>
+    <div id="flight-info"></div>
+  </section>
+
+<section class="section_container plain_container">
+    <p class="subheader">SUPPORT</p>
+    <h2 class="section_header" style="text-decoration: underline;"> Have the best trip ever</h2>
+    <p class="d">
+        mxncbjbdjbcjbcjncv cbvbfhffje the the gamnvbbbgnbvchcxbvhfbc
+    </p>
+    <div class="plain_grid">
+    <div class="plain_content">
+     <span class="number">1</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed
+    </p>
+     <span class="number">2</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed</p>
+     <span class="number">3</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed
+    </p>
+    </div>
+    <div class="plain_img">
+        <img src="assest/pg2.jpg" alt="my tag">
+        <img src="assest/flight3.jpg" alt="my tag">
+        <img src="assest/p33.jpg" alt="my tag">
+    </div>
+    </div>
+</section>
+
+<section class="section_container travellers_container">
+    <h2 class="section_header" style="text-decoration: underline;"> The most visited places this year </h2>
+    <div class="travellers_grid">
+        <div class="travellers_card">
+            <img src="assest/paris.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>Paris</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/london.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>London</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/carli.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>California</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/switzerland.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>Switzerland</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</footer>
+         <script src="script.js"></script>
+
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+
+
+
+
 </body>
 </html>
