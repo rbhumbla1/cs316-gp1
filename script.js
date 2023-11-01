@@ -38,6 +38,8 @@
 //         flightResultsSection.scrollIntoView({ behavior: 'smooth' });
 //     }
 
+    
+
     var api_request= 'https://api.flightapi.io/roundtrip/6542a549a398868dacdb5960/SFO/SEA/2023-11-03/2023-11-07/8/0/0/Economy/USD';
     fetch(api_request)
         .then(function (response) {
@@ -52,7 +54,7 @@
                 console.log(data.legs[i].departureTime);
                 console.log(data.legs[i].arrivalTime);
             }
-            
+            var result
         });
 
         
