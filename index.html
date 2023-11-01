@@ -1,95 +1,170 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- Updated Font Awesome link -->
-    
-    <title>Airline Flight Search</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flight website</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" crossorigin="anonymous"></script>
+
+        </head>
 <body>
-    <header>
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Flights</a></li>
-                <li><a href="https://www.hotels.com">Hotels</a></li>
-                <li><a href="https://www.enterprise.com">Cars</a></li>
-                <li><a href="https://www.vacation.com">Vacations</a></li>
-                <li id="language-selector">
-                    <div id="google_translate_element"></div>  
-                </li>
-            </ul>
+
+<!--NAR BAR-->
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check"  class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"> RUNWAY</label>
+    <ul>
+        <li ><a href="index.html">home</a></li>
+        <li ><a href="https://www.enterprise.com"  target="_blank">cars</a></li>
+        <li ><a href="https://www.delta.com" target="_blank">deals</a></li>
+        <li><a href="https://www.booking.com" target="_blank">hotel</a></li>
+        <li><a href="https://www.vacation.com" target="_blank">vacation</a></li>
+        <li><a href="contact.html" target="_blank">contact us</a></li>
+
+      </ul>
+    </nav>
+
+  <header  class="section_container header_container">
+    <h1 class="section_header"> Book  and have The Best deals with Us</h1>
+    <img src="assest/best.jpg" alt="header">
+
+</header>
+
+  <section  class="section_container  booking_container">
+    <div class="booking_nav">
+        <span>Economy Class</span>
+        <span>Business Class</span>
+        <span>First Class</span>
+    </div>
+    <form>
+        <div class="form_group">
+            <span><i class="ri-map-pin-line"></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label> Location</label>
+                    <id>destination</id>
+                </div>
+                <p>find your destination?</p>
+
+            </div>
         </div>
-            <img src="runway.PNG" alt="runway" class="top-right-photo">
-    </header>
+        <div class="form_group">
+            <span><i class="ri-user-fill"></i></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="number">
+                    <label> Passengers</label>
+                    <id>passenger</id>
+                </div>
+                <p>add passengers</p>
+            </div>
+        </div>
 
-    <main>
+        <div class="form_group">
+            <span><i class="ri-calendar-line"></i></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label> departure</label>
+                    <id>departureDateInput</id>
+                </div>
+                <p>Add date</p>
 
-        
-        <section id="search-form">
-            <select id="trip">
-                <label for="trip">Trip Type:</label>
-                <option value="one-way">One-way</option>
-                <option value="round-trip">Round-trip</option>
-            </select>
+            </div>
+        </div>
+        <div class="form_group">
+            <span><i class="ri-calendar-line"></i></i></span>
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="text">
+                    <label> return</label>
+                    <id>return-date</id>
+                </div>
+                <p>add date</p>
+            </div>
+        </div>
+       <button class="btn"><i class="ri-search-line"></i></button>
+    </form>
+  </section>
 
-            <select id="passenger">
-                <label for="passenger">Passengers:</label>
-                <option value="1">1 passenger</option>
-                <option value="2">2 passengers</option>
-                <option value="3">3 passengers</option>
-                <option value="4">4 passengers</option>
-                <option value="5">5 passengers</option>
-                <option value="6">6 passengers</option>
-                <option value="7">7 passengers</option>
-                <option value="8">8 passengers</option>
-            </select>
+<section class="section_container plain_container">
+    <p class="subheader">support</p>
+    <h2 class="section_header"> Have the best trip ever</h2>
+    <p class="d">
+        mxncbjbdjbcjbcjncv cbvbfhffje the the gamnvbbbgnbvchcxbvhfbc
+    </p>
+    <div class="plain_grid">
+    <div class="plain_content">
+     <span class="number">1</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed
+    </p>
+     <span class="number">2</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed</p>
+     <span class="number">3</span>
+     <h4>your requirement</h4>
+     <p>
+        stay informed
+    </p>
+    </div>
+    <div class="plain_img">
+        <img src="assest/pg2.jpg" alt="my tag">
+        <img src="assest/flight3.jpg" alt="my tag">
+        <img src="assest/p33.jpg" alt="my tag">
+    </div>
+    </div>
+</section>
 
-            <div id="passengerDetails"></div>
-            <h1>Find Flights</h1>
+<section class="section_container travellers_container">
+    <h2 class="section_header"> The most visit places this year </h2>
+    <div class="travellers_grid">
+        <div class="travellers_card">
+            <img src="assest/paris.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>Paris</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/london.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>LONDON</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/carli.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>CALIFORNIA</p>
+            </div>
+        </div>
+        <div class="travellers_card">
+            <img src="assest/switzerland.jpg" alt="paris">
+            <div class="travellers_card_content">
+                <p>Switzerland</p>
+            </div>
+        </div>
+    </div>
 
-            <form>
-                <label for="departure"></label>
-                <input type="text" id="departure" placeholder="From" required>
-                <label for="destination"></label>
-                <input type="text" id="destination" placeholder="To" required>
-                <label for="departureDateInput">Departure:</label>
-                <input type="date" id="departureDateInput" placeholder="Departure" required>
-                <label for="return-date">Return:</label>
-                <input type="date" id="return-date" placeholder="Return" required>
-                <button type="button" id="search-button">Search</button>
-            </form>
-        </section>
-    </main>
-    <section id="flight-results">
-        <h2>Flight Results</h2>
-        <div id="flight-result-content"></div>
-        <div id="flight-data"></div>
+</section>
 
-    </section>
-
-
-    <footer class="footer">
-        <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="https://github.com/rbhumbla1/cs316-gp1" target="_blank"  class="gray-icon"><i class="fab fa-github"></i></a></li>
-        </ul>
-    </footer>
-    
-    
-    
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script type="text/javascript" src="script.js"></script>
-
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>
+            <a href="contact.html">Contact Us</a>
+            <script src="script.js"></script>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
