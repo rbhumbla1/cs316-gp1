@@ -1,87 +1,57 @@
- 
-// fuction for google translate
-// function googleTranslateElementInit() {
-//     new google.translate.TranslateElement(
-//         {
-//             pageLanguage: 'en'
-//         },
-//         'google_translate_element'
-//     );
-// }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const departureDateInput = document.getElementById("departureDateInput");
-//     const returnDateInput = document.getElementById("return-date");
-//     const passengerCountSelect = document.getElementById("passenger");
-//     const form = document.querySelector("form");
+$(document).ready(function() {
+  // Select the trip type dropdown and return date input
+  var tripTypeSelect = $('#trip-type');
+  var returnDateInput = $('#return-date');
 
-//     if (!departureDateInput || !returnDateInput || !passengerCountSelect) {
-//         console.error("Departure, return date input, or passenger select not found.");
-//         return;
-//     }
+  // Listen for changes in the selected trip type
+  tripTypeSelect.change(function() {
+      // Check if the selected value is "one-way"
+      if (tripTypeSelect.val() === 'one-way') {
+          // Disable the "Return" date input
+          returnDateInput.prop('disabled', true);
+      } else {
+          // Enable the "Return" date input
+          returnDateInput.prop('disabled', false);
+      }
+  });
+});
 
-//     // Initialize departure date picker with the correct date format
-//     $(departureDateInput).datepicker({
-//         dateFormat: "yy-mm-dd",
-//         showButtonPanel: true,
-//     });
 
-//     // Initialize return date picker with the correct date format
-//     $(returnDateInput).datepicker({
-//         dateFormat: "yy-mm-dd",
-//         showButtonPanel: true,
-//     });
 
-//     // Function to scroll to flight results section
-//     function scrollToFlightResults() {
-//         const flightResultsSection = document.getElementById("flight-results");
-//         flightResultsSection.scrollIntoView({ behavior: 'smooth' });
-//     }
 
-    var api_request= 'https://api.flightapi.io/roundtrip/6541b87234d03694fc8237d2/SFO/SEA/2023-11-03/2023-11-07/8/0/0/Economy/USD';
+    var api_request = 'https://api.flightapi.io/roundtrip/65430fd7e654fd8dad608c8a/SFO/SEA/2023-11-03/2023-11-07/8/0/0/Economy/USD';
+
     fetch(api_request)
         .then(function (response) {
-            
-            
-            // console.log("response", response);
-            // return response.json();
+            return response.json();
         })
-        .then(function (data){console.log("data", data)})
+        .then(function (data) {
+            // Select the #result element using jQuery
+            var resultContainer = $('#result');
+    
+            for (let i = 0; i < 7; i++) {
+                // Create a new div element to display flight data
+                var flightDataDiv = $('<div>');
+                flightDataDiv.html(
+                    'Airline Codes: ' + data.legs[i].airlineCodes + '<br>' +
+                    'Departure Time: ' + data.legs[i].departureTime + '<br>' +
+                    'Arrival Time: ' + data.legs[i].arrivalTime
+                );
+                flightDataDiv.css('margin-bottom', '15px');
+                flightDataDiv.css('border', '1px solid black');
+                flightDataDiv.css('padding', '5px');
+                flightDataDiv.css('border-radius', '5px');
+                flightDataDiv.css('background-color', 'lightgray');
+                flightDataDiv.css('font-size', '15px');
+                flightDataDiv.css('text-align', 'left');
+                flightDataDiv.css('color', 'black');
+              
+                // Append the flight data to the result container
+                resultContainer.append(flightDataDiv);
+            }
+        });
 
-        
 
-    // Function to fetch and process flight data
-//     function fetchFlightData() {
-//         const api_key = "6541b87234d03694fc8237d2";
-//         const Departure_flight_date = departureDateInput.value;
-//         const Arrival_flight_date = returnDateInput.value;
-//         const passengerCount = parseInt(passengerCountSelect.value, 10);
 
-//         // Prepare the request parameters
-//         const params = new URLSearchParams({
-//             access_key: api_key,
-//         });
-
-//         // Construct the URL with the 'to' values
-//         const to = document.getElementById("destination").value;
-
-//         const flightAPIURL = `https://api.flightapi.io/roundtrip/${api_key}/$SFO/${to}/${Departure_flight_date}/${Arrival_flight_date}/${passengerCount}/0/0/Economy/USD`;
-
-//         window.location.href = flightAPIURL;
-//     }
-
-//     // event listener for "Search" button
-//     const searchButton = document.getElementById("search-button");
-//     searchButton.addEventListener("click", function (event) {
-//         event.preventDefault();
-//         form.reportValidity();
-//         if (form.checkValidity()) {
-//             fetchFlightData();
-//         }
-//     });
-
-//     //  event listener for the form submission
-//     form.addEventListener("submit", function (event) {
-//         event.preventDefault();
-//     });
-// });
+    
