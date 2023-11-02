@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,9 +7,12 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" crossorigin="anonymous"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         </head>
 <body>
+    
+    <div id="loading">Loading...</div>
+    <div id="flight-info"></div>
 
 <!--NAR BAR-->
 <nav>
@@ -34,87 +36,99 @@
     <h1 class="section_header"> Book  and have The Best deals with Us</h1>
     <img src="best.jpg" alt="header">
 
-</header>
+    <h1 class="section_header"> Book with Us</h1>
+    <img src="assest/best.jpg" alt="header">
+  </header>
+
 
   <section  class="section_container  booking_container">
+   <select class="trip">
+        <label for="trip">Trip Type:</label>
+        <option value="one-way">One-way</option>
+        <option value="round-trip">Round-trip</option>
+    </select>
     <div class="booking_nav">
-        <span>Economy Class</span>
-        <span>Business Class</span>
-        <span>First Class</span>
+        <a href="#" class="class-option">Economy Class</a>
+        <a href="#" class="class-option">Business Class</a>
+        <a href="#" class="class-option">First Class</a>
     </div>
     <form>
         <div class="form_group">
-            <span><i class="ri-map-pin-line"></i></span>
             <div class="input_content">
                 <div class="input_group">
-                    <input type="text">
-                    <label> Location</label>
-                    <id>destination</id>
+                    <input type="text"id="input-from" required>
+                    <label>From:</label>
                 </div>
-                <p>find your destination?</p>
+                <p>Find destination</p>
 
             </div>
         </div>
         <div class="form_group">
-            <span><i class="ri-user-fill"></i></i></span>
             <div class="input_content">
                 <div class="input_group">
-                    <input type="number">
+                    <input type="text" id="input-to"required>
+                    <label>To:</label>
+                </div>
+                <p>Find destination</p>
+
+            </div>
+        </div>
+        <div class="form_group">
+            <div class="input_content">
+                <div class="input_group">
+                    <input type="number" id="input-passenger"required>
                     <label> Passengers</label>
-                    <id>passenger</id>
                 </div>
-                <p>add passengers</p>
             </div>
         </div>
 
         <div class="form_group">
-            <span><i class="ri-calendar-line"></i></i></span>
             <div class="input_content">
                 <div class="input_group">
-                    <input type="text">
-                    <label> departure</label>
-                    <id>departureDateInput</id>
+                    <input type="date" id="input-departure" required>    
                 </div>
-                <p>Add date</p>
-
+                <p>Departure</p>
             </div>
         </div>
         <div class="form_group">
-            <span><i class="ri-calendar-line"></i></i></span>
             <div class="input_content">
                 <div class="input_group">
-                    <input type="text">
-                    <label> return</label>
-                    <id>return-date</id>
+                    <input type="date"  name="return-date" id="return-date">
                 </div>
-                <p>add date</p>
+                <p>Return</p>
             </div>
         </div>
-       <button class="btn"><i class="ri-search-line"></i></button>
+       <button  id="search-button"  class="btn"><i class="ri-search-line"></i>search</button>
     </form>
-  </section>
 
+  </section>
+    <section class=" section_container flight-result">
+        <div  id="result">
+            <h2>Flight Results:</h2>
+    </div>
+  </section>
+  
 <section class="section_container plain_container">
-    <p class="subheader">support</p>
-    <h2 class="section_header"> Have the best trip ever</h2>
+    <p class="subheader">SUPPORT</p>
+    <h2 class="section_header" style="text-decoration: underline;"> Have the best trip ever</h2>
     <p class="d">
-        mxncbjbdjbcjbcjncv cbvbfhffje the the gamnvbbbgnbvchcxbvhfbc
+        WELCOME to Runway
     </p>
     <div class="plain_grid">
     <div class="plain_content">
      <span class="number">1</span>
      <h4>your requirement</h4>
      <p>
-        stay informed
+        Tell the good news to friend and family
     </p>
      <span class="number">2</span>
-     <h4>your requirement</h4>
+     <h4>Your requirement</h4>
      <p>
-        stay informed</p>
+        stay informed with your flight</p>
      <span class="number">3</span>
      <h4>your requirement</h4>
      <p>
-        stay informed
+        Exprience the best price here
     </p>
     </div>
     <div class="plain_img">
@@ -126,7 +140,7 @@
 </section>
 
 <section class="section_container travellers_container">
-    <h2 class="section_header"> The most visit places this year </h2>
+    <h2 class="section_header" style="text-decoration: underline;"> The most visited places this year </h2>
     <div class="travellers_grid">
         <div class="travellers_card">
             <img src="paris.jpg" alt="paris">
@@ -137,13 +151,13 @@
         <div class="travellers_card">
             <img src="london.jpg" alt="paris">
             <div class="travellers_card_content">
-                <p>LONDON</p>
+                <p>London</p>
             </div>
         </div>
         <div class="travellers_card">
             <img src="carli.jpg" alt="paris">
             <div class="travellers_card_content">
-                <p>CALIFORNIA</p>
+                <p>California</p>
             </div>
         </div>
         <div class="travellers_card">
@@ -153,18 +167,18 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-links">
-            <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>
-            <a href="contact.html">Contact Us</a>
-            <script src="script.js"></script>
+            <a href="https://github.com/rbhumbla1/cs316-gp1" target="_blank">GitHub</a>
+            <a href="contact.html"  target="_blank">Contact Us</a>
         </div>
     </div>
 </footer>
+         <script src="script.js"></script>
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 </html>
